@@ -11,6 +11,15 @@ def open_file():
     list2 = []
     file_row_numb = 0
     with open('company_db.csv') as db:
+        
+        # makes row 1 the keys, and fills dictionaries with each rows data 
+        # company_db = csv.DictReader(db)
+
+        # loop thru the dictionaries and add them to the main dictionary
+        # for row in company_db:
+        #     company_db_dict.update(row)
+        
+        
         company_db = csv.reader(db)
         line1 = db.readline()
         line1_len = len(line1.split(','))
